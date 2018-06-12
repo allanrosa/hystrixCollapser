@@ -26,7 +26,7 @@ public class CustomerService {
     public List<Customer> getCustomerByIds(List<Long> ids){
         List<Customer> customers = new ArrayList<>();
         customers = ids.stream().map(id -> new Customer(id, "Customer"+id)).collect(Collectors.toList());
-        System.out.println(customers);
+        System.out.println(ids);
         return customers;
     }
 }
